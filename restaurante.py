@@ -1,3 +1,5 @@
+from avaliacao import Avaliacao
+
 class Restaurante:
     restaurantes = []
 
@@ -5,6 +7,7 @@ class Restaurante:
         self.nome = nome.title()
         self.categoria = categoria.upper()
         self._ativo = False
+        self._avaliacao = []
         Restaurante.restaurantes.append(self)
 
     def __str__(self):
@@ -23,4 +26,6 @@ class Restaurante:
     def alternar_estado(self):
         self._ativo = not self._ativo
 
-
+        def receber_avaliacao(self,cliente,nota):
+            avaliacao = Avaliacao(cliente,nota)
+            self._avaliacao.append(avaliacao)

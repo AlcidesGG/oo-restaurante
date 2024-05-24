@@ -6,6 +6,7 @@ restaurante_japones = Restaurante('Japa', 'Japonesa')
 
 restaurante_mexicano.alternar_estado()
 
+
 def main():
     Restaurante.listar_restaurantes()
 
